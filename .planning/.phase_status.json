@@ -1,0 +1,37 @@
+{
+  "job_id": "JOB-20260626153537-000112",
+  "worker_dir": "/home/deploy/squad/build-worker/JOB-20260626153537-000112",
+  "completed": true,
+  "results": {
+    "1": {
+      "status": "partial",
+      "file": "/home/deploy/squad/build-worker/JOB-20260626153537-000112/.planning/phases/1-project-overview/PLAN-01.md"
+    },
+    "2": {
+      "status": "ok",
+      "file": "/home/deploy/squad/build-worker/JOB-20260626153537-000112/.planning/phases/2-technical-stack/PLAN-01.md"
+    },
+    "3": {
+      "status": "ok",
+      "file": "/home/deploy/squad/build-worker/JOB-20260626153537-000112/.planning/phases/3-architecture/PLAN-01.md"
+    },
+    "4": {
+      "status": "ok",
+      "file": "/home/deploy/squad/build-worker/JOB-20260626153537-000112/.planning/phases/4-data-model/PLAN-01.md"
+    },
+    "5": {
+      "status": "ok",
+      "file": "/home/deploy/squad/build-worker/JOB-20260626153537-000112/.planning/phases/5-project-structure/PLAN-01.md"
+    },
+    "6": {
+      "status": "partial",
+      "file": "/home/deploy/squad/build-worker/JOB-20260626153537-000112/.planning/phases/6-out-of-scope/PLAN-01.md"
+    },
+    "7": {
+      "status": "partial",
+      "file": "/home/deploy/squad/build-worker/JOB-20260626153537-000112/.planning/phases/7-ui/ux/PLAN-01.md"
+    }
+  },
+  "tech_stack": "Python, PostgreSQL",
+  "ts": 1782489488.0057712
+}
