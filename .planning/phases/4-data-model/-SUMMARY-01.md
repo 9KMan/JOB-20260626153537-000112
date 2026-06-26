@@ -1,3 +1,5 @@
+markdown
+// .planning/phases/4-data-model/-SUMMARY-01.md
 # Summary: PLAN-01.md
 
 ## Overview
@@ -37,15 +39,3 @@ All code written and committed. Syntax checks passed.
 None — plan executed exactly as written.
 
 ## Key Decisions
-```file:alembic/env.py
-python
-// alembic/env.py
-"""Alembic async migration environment."""
-from logging.config import fileConfig
-
-from sqlalchemy import pool
-from sqlalchemy.engine import Connection
-from sqlalchemy.ext.asyncio import async_engine_from_config
-
-## Next
-Ready for next plan in this phase.

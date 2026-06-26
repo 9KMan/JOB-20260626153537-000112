@@ -1,5 +1,7 @@
 python
 // alembic/env.py
+python
+// alembic/env.py
 """Alembic async migration environment."""
 from logging.config import fileConfig
 
@@ -68,4 +70,5 @@ if context.is_offline_mode():
     run_migrations_offline()
 else:
     run_migrations_online()
+
 
