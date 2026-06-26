@@ -1,3 +1,5 @@
+markdown
+// .planning/phases/6-out-of-scope/-SUMMARY-01.md
 # Summary: PLAN-01.md
 
 ## Overview
@@ -29,3 +31,4 @@ None — plan executed exactly as written.
 
 ## Next
 Ready for next plan in this phase.
+
