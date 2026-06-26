@@ -1,4 +1,3 @@
-// .coding_prompt.txt
 You are a senior full-stack engineer. Write ALL source code for this project.
 
 ## Objective
@@ -98,3 +97,36 @@ The system has three layers; the role owns the implementation of all of them.
 
 Based on the stated requirements, the implementation will look like:
 
+```
+┌───────────────────────────────────────────────────────────────┐
+│  CLIENT LAYER — Web Application / Portal                      │
+│  • KPI dashboards for internal teams                           │
+│  • Authenticated via Cognito user pool JWTs                   │
+└───────────────────────────────────────────────────────────────┘
+                            │ HTTPS / REST + JSON
+                            ▼
+┌───────────────────────────────────────────────────────────────┐
+│  API LAYER — AWS API Gateway + Lambda (FastAPI on Mangum)     │
+│  • Auth: Cognito JWT verifier                                 │
+│  • CRUD: DynamoDB single-table (PK/SK design)                 │
+│  • Files: S3 presigned URLs (upload + download)               │
+│  • Tasks: outbound to Monday.com GraphQL API                  │
+│  • Webhooks: receive Monday updates, sync task status         │
+└───────────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────────
+
+## Task
+1. Read SPEC.md from /home/deploy/squad/build-worker/JOB-20260626153537-000112/SPEC.md
+2. Write complete production-ready source code files
+3. For Python: requirements.txt, alembic setup, FastAPI app, models, schemas, API routes, services, worker tasks
+4. For Node.js: package.json, src/ structure, tsconfig, etc.
+5. Include Docker support (Dockerfile, docker-compose.yml)
+6. Include README with "Business Problem Solved" as FIRST section after title
+7. All code must compile/be syntactically valid
+8. Output as file blocks: ```file:path
+content
+```
+
+Write every file completely. No stubs. No TODOs.
