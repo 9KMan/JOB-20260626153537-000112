@@ -1,11 +1,60 @@
-
-# Worker-internal files — NEVER push to GitHub
-PROPOSAL.md
-COVER_LETTER.txt
-SPEC.txt
-TASK.txt
-pid
-role
-*.pyc
+# ---- Python ------------------------------------------------------------------
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+*.egg
+
+# ---- Virtual environments ----------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Test / coverage ---------------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.cache
+coverage.xml
+*.cover
+.moto/
+
+# ---- Type checking / linters -------------------------------------------------
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# ---- Environment / secrets ---------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# ---- IDE ---------------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
 .DS_Store
+
+# ---- CDK ---------------------------------------------------------------------
+cdk.out/
+cdk.context.json
+
+# ---- Build artefacts ---------------------------------------------------------
+*.zip
+node_modules/
