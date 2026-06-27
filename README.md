@@ -154,7 +154,3 @@ API ready at: `http://localhost:8000/health` (when the FastAPI service is runnin
 - `alembic/` — database migrations (where applicable)
 - `Dockerfile`, `docker-compose.yml` — container build
 - `.planning/phases/` — per-phase plan + summary files
-
-## 👨‍💻 About the Architect
-
-**Mongkolpoj Phanutaecha** | Principal Data Platform Architect | AI-Augmented Engineering Factory | Bangkok, Thailand (GMT+7) | Open to Remote Contracts
