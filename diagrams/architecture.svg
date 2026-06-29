@@ -29,8 +29,8 @@
   <rect x="20" y="30" width="400" height="90" rx="10"
     fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="220" y="54" fill="white" font-size="12" font-weight="600" text-anchor="middle">Web Application / Portal</text>
-  <text x="220" y="72" fill="#67e8f9" font-size="9" text-anchor="middle">KPI dashboards for internal teams</text>
-  <text x="220" y="87" fill="#67e8f9" font-size="9" text-anchor="middle">Authenticated via Cognito user pool JWTs</text>
+  <text x="220" y="72" fill="#e2e8f0" font-size="9" text-anchor="middle">KPI dashboards for internal teams</text>
+  <text x="220" y="87" fill="#e2e8f0" font-size="9" text-anchor="middle">Authenticated via Cognito user pool JWTs</text>
   <text x="220" y="102" fill="#ffffff" font-size="8" text-anchor="middle">HTTPS / REST + JSON · React / Next.js</text>
 
   <!-- Arrow: Client → API Gateway -->
