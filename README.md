@@ -70,51 +70,27 @@ The system has three layers; the role owns the implementation of all of them.
 
 ## Architecture
 
-Based on the stated requirements, the implementation will look like:
+![Architecture Diagram](./diagrams/architecture.svg)
 
-```
-┌───────────────────────────────────────────────────────────────┐
-│  CLIENT LAYER — Web Application / Portal                      │
-│  • KPI dashboards for internal teams                           │
-│  • Authenticated via Cognito user pool JWTs                   │
-└───────────────────────────────────────────────────────────────┘
-                            │ HTTPS / REST + JSON
-                            ▼
-┌───────────────────────────────────────────────────────────────┐
-│  API LAYER — AWS API Gateway + Lambda (FastAPI on Mangum)     │
-│  • Auth: Cognito JWT verifier                                 │
-│  • CRUD: DynamoDB single-table (PK/SK design)                 │
-│  • Files: S3 presigned URLs (upload + download)               │
-│  • Tasks: outbound to Monday.com GraphQL API                  │
-│  • Webhooks: receive Monday updates, sync task status         │
-└───────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌───────────────────────────────────────────────────────────────┐
-│  ETL / DATA PROCESSING — EventBridge + Lambda / Batch         │
-│  • Scheduled triggers (cron) for batch lender/Yardi imports   │
-│  • S3 ObjectCreated events trigger parse-and-load Lambdas     │
-│  • Parsers: PDF (pdfplumber), Excel (openpyxl), CSV (pandas)  │
-│  • Raw landing in S3 with metadata, structured in DynamoDB    │
-│  • Idempotent (S3 etag + DynamoDB conditional writes)         │
-└───────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌───────────────────────────────────────────────────────────────┐
-│  DATA LAYER                                                    │
-│  • S3: raw uploads (versioned, lifecycle to Glacier)           │
-│  • DynamoDB: single-table design (Entities + GSI patterns)    │
-│  • KMS: envelope encryption on sensitive fields               │
-└───────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌───────────────────────────────────────────────────────────────┐
-│  EXTERNAL INTEGRATIONS                                         │
-│  • Monday.com: GraphQL v2 (outbound + inbound webhook)        │
-│  • Lender/bank portals: per-vendor connectors (HTTP/CSV)      │
-│  • Yardi: scheduled export pull + parser                       │
-└───────────────────────────────────────────────────────────────┘
-```
+> **Live diagram:** open [`diagrams/architecture.svg`](./diagrams/architecture.svg) in any browser for the full interactive version.
+
+### Component Overview
+
+| Layer | Component | Description |
+|---|---|---|
+| **Client** | Web Application / Portal | KPI dashboards · React/Next.js · Cognito JWT auth |
+| **API** | API Gateway + Lambda | FastAPI on Mangum · Cognito JWT · DynamoDB CRUD |
+| **API** | File Handler | S3 presigned URLs · upload + download |
+| **API** | Monday.com Integration | GraphQL v2 · outbound + inbound webhooks |
+| **ETL** | Scheduled Batch | EventBridge cron · lender/Yardi imports · Batch.compute |
+| **ETL** | S3 Event Triggers | ObjectCreated → Lambda · idempotent via etag |
+| **ETL** | Document Parsers | pdfplumber · openpyxl · pandas |
+| **Data** | Amazon S3 | Versioned raw uploads · lifecycle → Glacier |
+| **Data** | Amazon DynamoDB | Single-table design · GSI · conditional writes |
+| **Data** | AWS KMS | Envelope encryption on sensitive fields |
+| **External** | Monday.com | GraphQL v2 · task status sync |
+| **External** | Lender / Bank Portals | Per-vendor HTTP/CSV connectors |
+| **External** | Yardi | Scheduled export pull + parser |
 
 ---
 
