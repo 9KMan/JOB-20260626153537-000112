@@ -31,7 +31,7 @@
   <text x="220" y="54" fill="white" font-size="12" font-weight="600" text-anchor="middle">Web Application / Portal</text>
   <text x="220" y="72" fill="#67e8f9" font-size="9" text-anchor="middle">KPI dashboards for internal teams</text>
   <text x="220" y="87" fill="#67e8f9" font-size="9" text-anchor="middle">Authenticated via Cognito user pool JWTs</text>
-  <text x="220" y="102" fill="#64748b" font-size="8" text-anchor="middle">HTTPS / REST + JSON · React / Next.js</text>
+  <text x="220" y="102" fill="#e2e8f0" font-size="8" text-anchor="middle">HTTPS / REST + JSON · React / Next.js</text>
 
   <!-- Arrow: Client → API Gateway -->
   <line x1="220" y1="120" x2="220" y2="155" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
@@ -49,28 +49,28 @@
   <text x="140" y="202" fill="white" font-size="11" font-weight="600" text-anchor="middle">Auth Handler</text>
   <text x="140" y="218" fill="#6ee7b7" font-size="8" text-anchor="middle">Cognito JWT verifier</text>
   <text x="140" y="232" fill="#6ee7b7" font-size="8" text-anchor="middle">API Key validation</text>
-  <text x="140" y="246" fill="#64748b" font-size="7" text-anchor="middle">X-API-Key · Bearer token</text>
+  <text x="140" y="246" fill="#cbd5e1" font-size="7" text-anchor="middle">X-API-Key · Bearer token</text>
 
   <rect x="260" y="180" width="200" height="80" rx="8"
     fill="rgba(6,78,59,0.35)" stroke="#34d399" stroke-width="1.5"/>
   <text x="360" y="202" fill="white" font-size="11" font-weight="600" text-anchor="middle">CRUD Operations</text>
   <text x="360" y="218" fill="#6ee7b7" font-size="8" text-anchor="middle">DynamoDB single-table</text>
   <text x="360" y="232" fill="#6ee7b7" font-size="8" text-anchor="middle">PK/SK composite key design</text>
-  <text x="360" y="246" fill="#64748b" font-size="7" text-anchor="middle">Conditional writes</text>
+  <text x="360" y="246" fill="#cbd5e1" font-size="7" text-anchor="middle">Conditional writes</text>
 
   <rect x="480" y="180" width="200" height="80" rx="8"
     fill="rgba(6,78,59,0.35)" stroke="#34d399" stroke-width="1.5"/>
   <text x="580" y="202" fill="white" font-size="11" font-weight="600" text-anchor="middle">File Handler</text>
   <text x="580" y="218" fill="#6ee7b7" font-size="8" text-anchor="middle">S3 presigned URLs</text>
   <text x="580" y="232" fill="#6ee7b7" font-size="8" text-anchor="middle">Upload + download flows</text>
-  <text x="580" y="246" fill="#64748b" font-size="7" text-anchor="middle">multipart/form-data</text>
+  <text x="580" y="246" fill="#cbd5e1" font-size="7" text-anchor="middle">multipart/form-data</text>
 
   <rect x="700" y="180" width="260" height="80" rx="8"
     fill="rgba(6,78,59,0.35)" stroke="#34d399" stroke-width="1.5"/>
   <text x="830" y="202" fill="white" font-size="11" font-weight="600" text-anchor="middle">Monday.com Integration</text>
   <text x="830" y="218" fill="#6ee7b7" font-size="8" text-anchor="middle">GraphQL v2 API · Outbound</text>
   <text x="830" y="232" fill="#6ee7b7" font-size="8" text-anchor="middle">Inbound webhooks · Task sync</text>
-  <text x="830" y="246" fill="#64748b" font-size="7" text-anchor="middle">Status: pending → done</text>
+  <text x="830" y="246" fill="#cbd5e1" font-size="7" text-anchor="middle">Status: pending → done</text>
 
   <!-- Arrows between API sub-components -->
   <line x1="240" y1="220" x2="258" y2="220" stroke="#34d399" stroke-width="1.2" marker-end="url(#arrow-emerald)"/>
@@ -93,28 +93,28 @@
   <text x="140" y="357" fill="white" font-size="11" font-weight="600" text-anchor="middle">Scheduled Batch</text>
   <text x="140" y="373" fill="#fde68a" font-size="8" text-anchor="middle">EventBridge cron triggers</text>
   <text x="140" y="387" fill="#fde68a" font-size="8" text-anchor="middle">Lender / Yardi imports</text>
-  <text x="140" y="401" fill="#64748b" font-size="7" text-anchor="middle">Batch.compute</text>
+  <text x="140" y="401" fill="#cbd5e1" font-size="7" text-anchor="middle">Batch.compute</text>
 
   <rect x="260" y="335" width="200" height="80" rx="8"
     fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="360" y="357" fill="white" font-size="11" font-weight="600" text-anchor="middle">S3 Event Triggers</text>
   <text x="360" y="373" fill="#fde68a" font-size="8" text-anchor="middle">ObjectCreated → Lambda</text>
   <text x="360" y="387" fill="#fde68a" font-size="8" text-anchor="middle">Idempotent via S3 etag</text>
-  <text x="360" y="401" fill="#64748b" font-size="7" text-anchor="middle">S3 → Lambda trigger</text>
+  <text x="360" y="401" fill="#cbd5e1" font-size="7" text-anchor="middle">S3 → Lambda trigger</text>
 
   <rect x="480" y="335" width="200" height="80" rx="8"
     fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="580" y="357" fill="white" font-size="11" font-weight="600" text-anchor="middle">Document Parsers</text>
   <text x="580" y="373" fill="#fde68a" font-size="8" text-anchor="middle">pdfplumber · openpyxl · pandas</text>
   <text x="580" y="387" fill="#fde68a" font-size="8" text-anchor="middle">PDF, Excel, CSV ingestion</text>
-  <text x="580" y="401" fill="#64748b" font-size="7" text-anchor="middle">Raw → structured</text>
+  <text x="580" y="401" fill="#cbd5e1" font-size="7" text-anchor="middle">Raw → structured</text>
 
   <rect x="700" y="335" width="260" height="80" rx="8"
     fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="830" y="357" fill="white" font-size="11" font-weight="600" text-anchor="middle">Data Landing</text>
   <text x="830" y="373" fill="#fde68a" font-size="8" text-anchor="middle">S3 raw (versioned) + DynamoDB</text>
   <text x="830" y="387" fill="#fde68a" font-size="8" text-anchor="middle">Conditional writes · KMS</text>
-  <text x="830" y="401" fill="#64748b" font-size="7" text-anchor="middle">envelope encryption</text>
+  <text x="830" y="401" fill="#cbd5e1" font-size="7" text-anchor="middle">envelope encryption</text>
 
   <line x1="240" y1="375" x2="258" y2="375" stroke="#fbbf24" stroke-width="1.2" marker-end="url(#arrow-amber)"/>
   <line x1="460" y1="375" x2="478" y2="375" stroke="#fbbf24" stroke-width="1.2" marker-end="url(#arrow-amber)"/>
